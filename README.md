@@ -2,4 +2,4 @@
 
 2. <code>$ npm i</code>
 3. <code>$ npm start</code>
-
+4. go http://localhost:3000/
