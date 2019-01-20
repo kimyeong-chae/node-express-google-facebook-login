@@ -27,4 +27,13 @@ router.get('/login/callback/facebook', passport.authenticate("facebook", { failu
     res.render('login', { title: 'Facebook Login Success'})
 });
 
+/**
+ * instagram login
+ */
+router.get('/login/instagram', passport.authenticate("instagram"));
+
+router.get('/login/callback/instagram', passport.authenticate("instagram", { failureRedirect: '/' }), (req, res, next) => {
+    res.render('login', { title: 'Instagram Login Success'})
+});
+
 module.exports = router;
